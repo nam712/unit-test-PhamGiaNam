@@ -15,7 +15,8 @@ student-analyzer
  │    ├── main
  │    │    └── java
  │    │         └── com/mycompany/student/analyzer/
- │    │              └── StudentAnalyzer.java
+ │    │              └── Main.java
+                     └── StudentAnalyzer.java
  │    ├── test
  │    │    └── java
  │    │         └── com/mycompany/student/analyzer/

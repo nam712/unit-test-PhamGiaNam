@@ -4,8 +4,8 @@
 
 Viết chương trình Java để phân tích điểm số học sinh, gồm:
 
--  Đếm số học sinh đạt loại Giỏi (điểm >= 8.0), bỏ qua các điểm số không hợp lệ (nhỏ hơn 0 hoặc lớn hơn 10).
--  Tính điểm trung bình của các điểm hợp lệ (từ 0 đến 10).
+- Đếm số học sinh đạt loại Giỏi (điểm >= 8.0), bỏ qua các điểm số không hợp lệ (nhỏ hơn 0 hoặc lớn hơn 10).
+- Tính điểm trung bình của các điểm hợp lệ (từ 0 đến 10).
 
 ## Cấu trúc dự án
 
@@ -16,18 +16,17 @@ student-analyzer
  │    │    └── java
  │    │         └── com/mycompany/student/analyzer/
  │    │              └── Main.java
-                     └── StudentAnalyzer.java
- │    ├── test
- │    │    └── java
- │    │         └── com/mycompany/student/analyzer/
- │    │              └── StudentAnalyzerTest.java
- │    └── nbproject
- │         └── project.properties
+ │    │              └── StudentAnalyzer.java
+ │    └─── test
+ │         └── java
+ │              └── com/mycompany/student/analyzer/
+ │                   └── StudentAnalyzerTest.java
  ├── README.md
- └── pom.xml 
+ └── pom.xml
 ```
 
 ## Hướng dẫn chạy và kiểm thử
+
 ### Yêu cầu
 
 - JDK 8 trở lên
@@ -35,6 +34,7 @@ student-analyzer
 - IDE (NetBeans, IntelliJ IDEA, Eclipse...) hoặc dòng lệnh
 
 ### Cách chạy chương trình
+
 1. Chuột phải vào thư mục gốc dự án, nhấn vào Open in Terminal.
 2. Biên dịch:
 
@@ -52,6 +52,6 @@ Hoặc chạy trực tiếp trong IDE bằng nút run.
 
 ### Cách chạy test
 
-   ```bash
-   mvn test
-   ```
+```bash
+mvn test
+```

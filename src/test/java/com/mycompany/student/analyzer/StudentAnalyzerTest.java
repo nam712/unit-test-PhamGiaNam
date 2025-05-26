@@ -1,12 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
- */
 package com.mycompany.student.analyzer;
 
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,24 +12,44 @@ public class StudentAnalyzerTest {
     @Test
     public void testCountExcellentStudents_NormalCase() {
         StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(2, analyzer.countExcellentStudents(Arrays.asList(9.0, 8.5, 7.0, 11.0, -1.0)));
+        List<Double> input = Arrays.asList(9.0, 8.5, 7.0, 11.0, -1.0);
+        int result = analyzer.countExcellentStudents(input);
+        System.out.println("Test: testCountExcellentStudents_NormalCase");
+        System.out.println("Input: " + input);
+        System.out.println("Output (Excellent Students): " + result);
+        assertEquals(2, result);
     }
 
     @Test
     public void testCountExcellentStudents_EmptyList() {
         StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(0, analyzer.countExcellentStudents(Collections.emptyList()));
+        List<Double> input = Collections.emptyList();
+        int result = analyzer.countExcellentStudents(input);
+        System.out.println("Test: testCountExcellentStudents_EmptyList");
+        System.out.println("Input: " + input);
+        System.out.println("Output (Excellent Students): " + result);
+        assertEquals(0, result);
     }
 
     @Test
     public void testCalculateValidAverage_NormalCase() {
         StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(8.17, analyzer.calculateValidAverage(Arrays.asList(9.0, 8.5, 7.0, 11.0, -1.0)), 0.01);
+        List<Double> input = Arrays.asList(9.0, 8.5, 7.0, 11.0, -1.0);
+        double result = analyzer.calculateValidAverage(input);
+        System.out.println("Test: testCalculateValidAverage_NormalCase");
+        System.out.println("Input: " + input);
+        System.out.printf("Output (Valid Average): %.2f%n", result);
+        assertEquals(8.17, result, 0.01);
     }
 
     @Test
     public void testCalculateValidAverage_EmptyList() {
         StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(0.0, analyzer.calculateValidAverage(Collections.emptyList()));
+        List<Double> input = Collections.emptyList();
+        double result = analyzer.calculateValidAverage(input);
+        System.out.println("Test: testCalculateValidAverage_EmptyList");
+        System.out.println("Input: " + input);
+        System.out.printf("Output (Valid Average): %.2f%n", result);
+        assertEquals(0.0, result);
     }
 }
